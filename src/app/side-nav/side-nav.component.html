@@ -1,0 +1,50 @@
+<mat-sidenav-container class="side-nav-container">
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" >
+        <a routerLink="/" class="logo">{{ appTitle }}</a>
+
+            <div id="side-nav">
+                <section>
+                    <h3>Men</h3>
+                    <ul>
+                        <li>Tshirts</li>
+                        <li>Longsleeve</li>
+                        <li>Tanktop</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Woman</h3>
+                    <ul>
+                        <li>Tshirts</li>
+                        <li>Longsleeve</li>
+                        <li>Tanktop</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Children</h3>
+                    <ul>
+                        <li>Tshirts</li>
+                        <li>Longsleeve</li>
+                        <li>Tanktop</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Accessories</h3>
+                    <ul>
+                        <li>Hats/Beenies</li>
+                    </ul>
+                </section>
+            </div>
+    </mat-sidenav>
+  
+    <mat-sidenav-content>
+        <app-nav></app-nav>
+        <!-- sidenav.toggle() -->
+        <button mat-button (click)="toggleNav()" class="menu-toggle"><mat-icon>{{ opened ? 'hdr_weak' : 'hdr_strong'}}</mat-icon></button>
+        <section>
+            <router-outlet></router-outlet>
+        </section>
+    </mat-sidenav-content>
+
+  </mat-sidenav-container>
+  
+  
