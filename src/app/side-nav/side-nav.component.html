@@ -1,7 +1,6 @@
 <mat-sidenav-container class="side-nav-container">
     <mat-sidenav #sidenav mode="side" [(opened)]="opened" >
         <a routerLink="/" class="logo">{{ appTitle }}</a>
-
             <div id="side-nav">
                 <section>
                     <h3>Men</h3>
@@ -39,7 +38,7 @@
     <mat-sidenav-content>
         <app-nav></app-nav>
         <!-- sidenav.toggle() -->
-        <button mat-button (click)="toggleNav()" class="menu-toggle"><mat-icon>{{ opened ? 'hdr_weak' : 'hdr_strong'}}</mat-icon></button>
+        <button mat-button (click)="toggleNav()" class="menu-toggle" [ngClass]="(opened)?'nav-open':'nav-closed'"><mat-icon>{{ opened ? 'hdr_weak' : 'hdr_strong'}}</mat-icon></button>
         <section>
             <router-outlet></router-outlet>
         </section>

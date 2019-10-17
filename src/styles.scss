@@ -66,5 +66,12 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .logo {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 26px;
+    font-family: 'Fredoka One', cursive;
+    letter-spacing: 2px;
+    text-shadow: 2px 1px 1px #000;
+}
+
+.mat-drawer-inner-container {
+    overflow-x: hidden!important;
 }
