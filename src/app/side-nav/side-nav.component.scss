@@ -10,17 +10,17 @@
         color: #fff;
         border-radius: 0px;
         top: 45%;
+        position: fixed;
         padding: 20px 10px;
         min-width: 20px;        
     }
 
     .mat-drawer {
-        width: 250px;
         background: #7700FF;
         color: #fff;
         padding: 1.3em 0.5em;
         border: none;
-        overflow: hidden;
+        overflow-x: hidden;
 
         a {
             color: #fff;
@@ -29,4 +29,5 @@
     }
     
 }
+
   
