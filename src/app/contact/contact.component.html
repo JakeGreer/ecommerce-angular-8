@@ -1,6 +1,6 @@
 <h1>Contact us</h1>
 
-<mat-grid-list cols="2" offset="1">
+<mat-grid-list cols="2" rowHeight="500px">
     <mat-grid-tile>
         <form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
 
@@ -8,16 +8,30 @@
         
             <mat-form-field>
                 <input matInput type="text" formControlName="name" placeholder="Name" >
-                <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-                    <div *ngIf="messageForm.controls.name.errors.required">Your name is required</div>
-                </div>
+                <mat-hint *ngIf="submitted && messageForm.controls.name.errors" >
+                    <span *ngIf="messageForm.controls.name.errors.required">Required</span>
+                </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput type="text" formControlName="email" placeholder="Email Address" >
+                <mat-hint *ngIf="submitted && messageForm.controls.email.errors" >
+                    <span *ngIf="messageForm.controls.email.errors.required">Required</span>
+                </mat-hint>
             </mat-form-field>
         
             <mat-form-field>
-                <textarea  matInput formControlName="message" placeholder="Message" ></textarea>
-                <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-                    <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
-                </div>
+                <textarea  
+                    matInput 
+                    cdkTextareaAutosize
+                    #autosize="cdkTextareaAutosize"
+                    cdkAutosizeMinRows="1"
+                    cdkAutosizeMaxRows="5" 
+                    formControlName="message" 
+                    placeholder="Message"></textarea>
+                <mat-hint *ngIf="submitted && messageForm.controls.message.errors">
+                    <span *ngIf="messageForm.controls.message.errors.required">Required</span>
+                </mat-hint>
             </mat-form-field>
         
             <button class="cta" type="submit" mat-raised-button>Send Message</button>
@@ -26,11 +40,3 @@
         </form>
     </mat-grid-tile>
 </mat-grid-list>
-
-<div *ngIf="submitted" class="results">
-    <strong>Name:</strong> 
-    <span>{{ messageForm.controls.name.value }}</span>
-
-    <strong>Message:</strong> 
-    <span>{{ messageForm.controls.message.value }}</span>
-</div>

@@ -29,6 +29,9 @@ $ng7-theme: mat-light-theme($ng7-primary, $ng7-accent, $ng7-warn);
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
+@import "./variables.scss";
+
+
 body, html {
     height: 100%;
     margin: 0 auto;
@@ -55,7 +58,7 @@ a {
     }
 }
 
-section {
+section.main-content {
     width: 80%;
     margin: 0 auto;
     padding: 2em;
@@ -67,9 +70,9 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .logo {
     font-weight: bold;
     font-size: 26px;
-    font-family: 'Fredoka One', cursive;
+    font-family: $logo-font;
     letter-spacing: 2px;
-    text-shadow: 2px 1px 1px #000;
+    text-shadow: 1px 1px 1px #000;
 }
 
 .mat-drawer-inner-container {

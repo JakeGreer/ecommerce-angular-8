@@ -1,17 +1,14 @@
+@import "../../variables.scss";
+
 header {
-    background: #7700FF;
-    position: fixed;
+    background: $primary;
+    position: sticky;
+    z-index: 2;
     top: 0;
     right: 0; 
     left: 0;
 
     div.container {
-        p {
-            margin: 0;
-            padding: 0;
-            height: 0;
-            width: 0;
-        }
         nav {
             justify-self: right;
         
@@ -28,7 +25,7 @@ header {
                         font-size: .8em;
     
                         &:hover {
-                            background: #8E2BFF;
+                            background: $primary-hover;
                         }
                     }
                 }

@@ -1,49 +1,21 @@
-h1 {
-    margin-top: 5em;
-}
+@import "../../variables.scss";
 
 form {
     width: 100%;
 }
 
-mat-form-field {
+.mat-form-field {
     display: block;
-    
-    // input, textarea {
-    //     display: block;
-    //     width: 50%;
-    //     padding: 1em;
-    // }
-
-    .error {
-        margin-top: -20px;
-        padding: .5em;
-        display: inline-block;
-        font-size: .9em;
-        color: red;
-        
-        margin-bottom: 20px;
-    }
+    margin-bottom: 1.5em;
 }
 
 .cta {
     background: #7700FF;
     border: none;
     color: white;
-
+    margin-top: 1em;
     text-transform: uppercase;
     cursor: pointer;
-    font-family: 'Montserrat';
-}
-
-.results {
-    margin-top: 50px;
-
-    strong {
-        display: block;
-    }
-    span {
-        margin-bottom: 20px;
-        display: block;
-    }
+    font-family: $primary-font;
+    letter-spacing: 1px;
 }

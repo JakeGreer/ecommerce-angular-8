@@ -9,7 +9,8 @@ import {
     MatSelectModule, 
     MatIconModule, 
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule
  } from '@angular/material';
 
 
@@ -44,6 +45,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     MatIconModule,
     MatGridListModule,
     MatSidenavModule,
+    MatToolbarModule,
     BrowserAnimationsModule
   ],
   providers: [],
