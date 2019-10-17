@@ -1,0 +1,32 @@
+.side-nav-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    button.menu-toggle {
+        background: #7700FF;
+        color: #fff;
+        border-radius: 0px;
+        top: 45%;
+        padding: 20px 10px;
+        min-width: 20px;        
+    }
+
+    .mat-drawer {
+        width: 250px;
+        background: #7700FF;
+        color: #fff;
+        padding: 1.3em 0.5em;
+        border: none;
+        overflow: hidden;
+
+        a {
+            color: #fff;
+            padding: 1.5em;
+        }
+    }
+    
+}
+  
