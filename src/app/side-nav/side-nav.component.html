@@ -1,45 +1,47 @@
 <mat-sidenav-container class="side-nav-container">
-    <mat-sidenav #sidenav mode="side" [(opened)]="opened" >
-        <a routerLink="/" class="logo">{{ appTitle }}</a>
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" [fixedInViewport]="true" >
+        <!-- <a routerLink="/" class="logo">{{ appTitle }}</a> -->
             <div id="side-nav">
                 <section>
                     <h3>Men</h3>
                     <ul>
-                        <li>Tshirts</li>
-                        <li>Longsleeve</li>
-                        <li>Tanktop</li>
+                        <li><a>Tshirts</a></li>
+                        <li><a href="#">Longsleeve</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Tanktop</a></li>
                     </ul>
                 </section>
                 <section>
                     <h3>Woman</h3>
                     <ul>
-                        <li>Tshirts</li>
-                        <li>Longsleeve</li>
-                        <li>Tanktop</li>
+                        <li><a href="#">Tshirts</a></li>
+                        <li><a href="#">Longsleeve</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Tanktop</a></li>
                     </ul>
                 </section>
                 <section>
                     <h3>Children</h3>
                     <ul>
-                        <li>Tshirts</li>
-                        <li>Longsleeve</li>
-                        <li>Tanktop</li>
+                        <li><a href="#">Tshirts</a></li>
+                        <li><a href="#">Longsleeve</a></li>
+                        <li><a href="#">Jackets</a></li>
+                        <li><a href="#">Tanktop</a></li>
                     </ul>
                 </section>
                 <section>
                     <h3>Accessories</h3>
                     <ul>
-                        <li>Hats/Beenies</li>
+                        <li><a href="#">Hats/Beenies</a></li>
                     </ul>
                 </section>
             </div>
     </mat-sidenav>
   
     <mat-sidenav-content>
-        <app-nav></app-nav>
         <!-- sidenav.toggle() -->
         <button mat-button (click)="toggleNav()" class="menu-toggle" [ngClass]="(opened)?'nav-open':'nav-closed'"><mat-icon>{{ opened ? 'hdr_weak' : 'hdr_strong'}}</mat-icon></button>
-        <section>
+        <section class="main-content">
             <router-outlet></router-outlet>
         </section>
     </mat-sidenav-content>

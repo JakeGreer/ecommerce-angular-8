@@ -9,9 +9,11 @@ import {
     MatSelectModule, 
     MatIconModule, 
     MatGridListModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatToolbarModule,
+    MatCardModule
  } from '@angular/material';
-
+ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -44,7 +46,10 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     MatIconModule,
     MatGridListModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    MatToolbarModule,
+    MatCardModule,
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

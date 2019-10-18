@@ -1,31 +1,63 @@
+@import "../../variables.scss";
+
 .side-nav-container {
-    position: absolute;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
 
     button.menu-toggle {
-        background: #7700FF;
+        background: $primary;
         color: #fff;
         border-radius: 0px;
         top: 45%;
+        margin-left: -1px;
         position: fixed;
         padding: 20px 10px;
-        min-width: 20px;        
+        min-width: 20px;  
+        z-index: 99;      
     }
 
     .mat-drawer {
-        background: #7700FF;
-        color: #fff;
-        padding: 1.3em 0.5em;
+        background: #fff;
+        color: $secondary;
+        padding: 1.3em 0em;
         border: none;
         overflow-x: hidden;
+        width: 200px;
+        border-right: 2px solid $secondary;
 
         a {
-            color: #fff;
-            padding: 1.5em;
+            color: $primary;
+            padding: 0.5em;
+            padding-left: 1.5em;
+            display: inline-block;
         }
+        section {
+            font-family: $primary-font;
+        
+            &:first-child {
+                margin-top: 5em;
+            }
+            h3 {
+                display: inline;
+                border-bottom: 2px solid $secondary;
+                color: $secondary;
+                padding-bottom: 5px;
+                margin-left: 15px;
+            }
+            ul {
+                padding-left: 10px;
+                li {
+                    list-style: none;
+                    a{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
     }
     
 }
