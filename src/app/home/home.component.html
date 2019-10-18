@@ -1,6 +1,3 @@
-<h1>Home</h1>
-
-
 <!-- <div id="product-list">
     <ul *ngIf="users">
         <li *ngFor="let user of users.data">
@@ -9,3 +6,68 @@
         </li>
     </ul>
 </div> -->
+
+<div class="row">
+    <div class="col-md-12">
+        <mdb-carousel class="carousel slide carousel-fade" [animation]="'fade'">
+            <mdb-carousel-item>
+                <div class="view w-100 text-center">
+                    <img class="d-block w-100" src="assets/images/clothing-1.jpg" alt="First slide">
+                    <div class="mask rgba-black-light waves-light" mdbWavesEffect></div>
+                </div>
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+                <div class="view w-100 text-center">
+                    <img class="d-block w-100" src="assets/images/clothing-2.jpg" alt="Second slide">
+                    <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+                </div>
+            </mdb-carousel-item>
+            <mdb-carousel-item>
+                <div class="view w-100 text-center">
+                    <img class="d-block w-100" src="assets/images/clothing-3.jpg" alt="Third slide">
+                    <div class="mask rgba-black-slight waves-light" mdbWavesEffect></div>
+                </div>
+            </mdb-carousel-item>
+        </mdb-carousel>
+    </div>
+</div>
+
+<mat-grid-list cols="2">
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <!-- <mat-card-header>
+                <mat-card-title>White T-Shirt</mat-card-title>
+            </mat-card-header> -->
+            <mat-card-content>
+                <img mat-card-image src="assets/images/t-shirt-white.jpg" height="300" />
+            </mat-card-content>
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <img mat-card-image src="assets/images/long-sleeve-pink.jpg" height="300" />
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <img mat-card-image src="assets/images/long-sleeve-heather.jpg" height="300" />
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <img mat-card-image src="assets/images/t-shirt-black.jpg" height="300" />
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <img mat-card-image src="assets/images/long-sleeve-white.jpg" height="300" />
+        </mat-card>
+    </mat-grid-tile>
+    <mat-grid-tile>
+        <mat-card class="product-wrapper">
+            <img mat-card-image src="assets/images/t-shirt-light-purple.jpg" height="300" />
+        </mat-card>
+    </mat-grid-tile>
+    
+
+</mat-grid-list>

@@ -10,9 +10,10 @@ import {
     MatIconModule, 
     MatGridListModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatCardModule
  } from '@angular/material';
-
+ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -46,7 +47,9 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     MatGridListModule,
     MatSidenavModule,
     MatToolbarModule,
-    BrowserAnimationsModule
+    MatCardModule,
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
